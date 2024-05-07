@@ -9,17 +9,7 @@
       >
         Seleccionar aleatoriamente
       </button>
-      <div class="user-list">
-        <button
-          v-for="user in users"
-          :key="user.id"
-          @click="toggleUserSelection(user)"
-          :class="{ 'bg-green-500': user.selected, 'bg-blue-500 hover:bg-blue-700': !user.selected }"
-          class="user-button text-white font-bold py-2 px-4 rounded mb-2 w-full text-left"
-        >
-          {{ user.name }}
-        </button>
-      </div>
+      
       
     </div>
 
@@ -120,7 +110,7 @@ export default {
       questions: [
         {
           text: '¿Cuál de las siguientes opciones es un elemento del diagrama de clases del patrón bridge?',
-          options: ['Concrete Abstraction', 'Concrete Implementation', 'Abstract Implementation', 'Abstract Bridge'],
+          options: ['Concrete Implementation', 'Concrete Abstraction', 'Abstract Implementation', 'Abstract Bridge'],
           answer: 'Concrete Abstraction'
         },
         {
@@ -130,16 +120,16 @@ export default {
         },
         {
           text: '¿Cuál es una desventaja del patrón bridge?',
-          options: ['Costo de mantenimiento', 'Mayor flexibilidad', 'Mejor rendimiento', 'Fácil comprensión'],
+          options: ['Mayor flexibilidad', 'Mejor rendimiento', 'Fácil comprensión','Costo de mantenimiento'],
           answer: 'Costo de mantenimiento'
         },
         {
           text: '¿Cuál es la definición del patrón bridge?',
-          options: [
+          options: ['Es una técnica para implementar algoritmos',
             'Es una técnica que separa una abstracción de su implementación',
             'Es un diseño basado en herencia múltiple',
             'Es un patrón que no se utiliza en desarrollo de software',
-            'Es una técnica para implementar algoritmos'
+            
           ],
           answer: 'Es una técnica que separa una abstracción de su implementación'
         }
